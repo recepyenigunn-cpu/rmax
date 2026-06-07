@@ -1,0 +1,25 @@
+0. Use English Language
+1. Install
+2. Replace K'D
+	to /Applications/Cubase 15.app/Contents/MacOS/Cubase 15
+		(using show package contents)
+3. Codesign by running the following codes, copy paste in terminal
+4. Enjoy
+
+
+Credits : @iamdumb
+
+Reference code to paste in terminal
+
+
+
+function hex() {
+echo ''$1'' | perl -0777pe 's|([0-9a-zA-Z]{2}+(?![^\(]*\)))|\\x${1}|gs'
+}
+function prep() {
+sudo xattr -cr "$1"
+sudo xattr -r -d com.apple.quarantine "$1"
+sudo codesign --force --sign - "$1"
+}
+
+prep "/Applications/Cubase 15.app/Contents/MacOS/Cubase 15"
