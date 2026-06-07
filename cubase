@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo sqlite3 ~/Library/Application\ Support/com.apple.TCC/TCC.db "INSERT or REPLACE INTO access VALUES('kTCCServiceMicrophone','com.steinberg.cubase14',0,2,2,1,NULL,NULL,NULL,'UNUSED',NULL,0,1652639195,NULL,NULL,'UNUSED',0);"
+
+exit 0
